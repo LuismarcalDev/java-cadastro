@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Funcionário</title>
+</head>
+<body>
+<h2>Cadastro de Funcionário</h2>
+
+<form th:action="@{/cadastro}" th:object="${funcionario}" method="post">
+    <label>Nome:</label><br>
+    <input type="text" th:field="*{nome}" required/><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" th:field="*{email}" required/><br><br>
+
+    <label>Telefone:</label><br>
+    <input type="text" th:field="*{telefone}"/><br><br>
+
+    <label>Idade:</label><br>
+    <input type="number" th:field="*{idade}"/><br><br>
+
+    <button type="submit">Salvar</button>
+</form>
+
+<br>
+<a href="/lista">Ver lista de funcionários</a>
+</body>
+</html>
