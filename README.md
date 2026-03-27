@@ -1,12 +1,14 @@
-🚀🚀 PROJETO - SISTEMA DE FUNCIONÁRIOS 🚀🚀
-⚠️⚠️ ANTES DE RODAR O PROJETO ⚠️⚠️
+# 📦 Projeto - Sistema de Funcionários
 
-Antes de iniciar a aplicação, você PRECISA configurar o banco de dados no MySQL.
+## 🚀 Antes de rodar o projeto
 
-🛠️🛠️ 1. CRIAR O BANCO DE DADOS 🛠️🛠️
+Antes de iniciar a aplicação, é necessário configurar o banco de dados corretamente no seu MySQL.
 
-Execute o script abaixo no seu MySQL:
+### 🛠️ 1. Criar o banco de dados
 
+Execute o seguinte script diretamente no seu MySQL:
+
+```sql
 CREATE DATABASE empresa;
 USE empresa;
 
@@ -17,20 +19,29 @@ CREATE TABLE funcionario (
     telefone VARCHAR(30),
     idade INT
 );
+```
 
-✅ Apenas copie e cole no MySQL e execute.
+> ✅ Basta copiar e colar no MySQL e executar.
 
-⚙️⚙️ 2. SINCRONIZAR O MAVEN ⚙️⚙️
+---
+
+### ⚙️ 2. Configurar o Maven
 
 Após abrir o projeto na sua IDE:
 
-Clique em "Sincronizar Maven" (Reload Maven Project)
-Isso irá baixar todas as dependências automaticamente
-🔐🔐 3. CONFIGURAR O BANCO 🔐🔐
+* Clique em **"Sincronizar Maven"** (ou *Reload Maven Project*)
+* Isso irá baixar automaticamente todas as dependências necessárias
 
-No arquivo application.properties, informe seus dados:
+---
 
+### 🔐 3. Configurar acesso ao banco
+
+No arquivo `application.properties`, preencha suas credenciais do MySQL:
+
+```properties
 spring.datasource.username=SEU_USUARIO
 spring.datasource.password=SUA_SENHA
+```
 
-⚠️ Confirme que o banco empresa está correto na configuração.
+> 💡 Certifique-se de que o nome do banco (`empresa`) está correto na configuração.
+
